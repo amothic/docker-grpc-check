@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net"
 
@@ -10,12 +11,14 @@ import (
 )
 
 func main() {
-	lis, err := net.Listen("tcp", "localhost:8080")
+	lis, err := net.Listen("tcp", ":8080")
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
 	grpcServer := grpc.NewServer()
 	grpc_health_v1.RegisterHealthServer(grpcServer, health.NewServer())
+
+	fmt.Println("server is running on port 8080")
 	if err := grpcServer.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
