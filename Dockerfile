@@ -5,7 +5,7 @@
 ##
 FROM golang:1.20-alpine AS build
 
-WORKDIR /app
+WORKDIR /workdir
 
 COPY go.mod ./
 COPY go.sum ./

@@ -1,4 +1,4 @@
-module grpc-check
+module grpc-health-check-server
 
 go 1.20
 
