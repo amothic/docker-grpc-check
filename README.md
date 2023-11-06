@@ -5,8 +5,8 @@ It's useful for deployment and operational testing.
 
 # Usage
 ```bash
-$ docker run --rm -p 8080:8080 amothic/grpc-health-check-server:latest
+$ docker run --rm -p 9090:9090 amothic/grpc-health-check-server:latest
 
 # Health Check
-$ grpc-health-probe -addr=localhost:8080
+$ grpc-health-probe -addr=localhost:9090
 ```

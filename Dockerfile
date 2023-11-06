@@ -24,7 +24,7 @@ WORKDIR /
 
 COPY --from=build /server /server
 
-EXPOSE 8080
+EXPOSE 9090
 
 USER nonroot:nonroot
 
